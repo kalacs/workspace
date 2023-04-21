@@ -1,19 +1,24 @@
-import { NxWelcomeComponent } from "./nx-welcome.component";
-import { Route } from "@angular/router";
+import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
-    path: "details",
+    path: 'account',
     loadChildren: () =>
-      import("details/Module").then((m) => m.RemoteEntryModule),
+      import('account/Module').then((m) => m.RemoteEntryModule),
   },
   {
-    path: "browse",
+    path: 'details',
     loadChildren: () =>
-      import("browse/Module").then((m) => m.RemoteEntryModule),
+      import('details/Module').then((m) => m.RemoteEntryModule),
   },
   {
-    path: "",
-    component: NxWelcomeComponent,
+    path: 'browse',
+    loadChildren: () =>
+      import('browse/Module').then((m) => m.RemoteEntryModule),
+  },
+  {
+    path: '',
+    loadChildren: () =>
+      import('browse/Module').then((m) => m.RemoteEntryModule),
   },
 ];

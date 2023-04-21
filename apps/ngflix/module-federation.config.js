@@ -1,4 +1,4 @@
 module.exports = {
-  name: "ngflix",
-  remotes: ["browse", "details"],
+  name: 'ngflix',
+  remotes: ['browse', 'details', 'account'],
 };
