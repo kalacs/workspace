@@ -1,5 +1,5 @@
-const { withModuleFederation } = require("@nrwl/angular/module-federation");
-const config = require("./module-federation.config");
+const { withModuleFederation } = require('@nrwl/angular/module-federation');
+const config = require('./module-federation.config');
 module.exports = withModuleFederation({
   ...config,
   /*
@@ -8,8 +8,8 @@ module.exports = withModuleFederation({
    *
    * e.g.
    * remotes: [
-   *   ['app1', 'https://app1.example.com'],
-   *   ['app2', 'https://app2.example.com'],
+   *   ['details', 'https://workspace-ten-sage.vercel.app/'],
+   *   ['account', 'https://ngflix-account.vercel.app/'],
    * ]
    */
 });
