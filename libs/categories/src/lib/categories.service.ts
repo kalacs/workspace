@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { from, Observable, switchMap } from 'rxjs';
 import { Category, CategoryDataResult } from './category';
@@ -14,11 +14,10 @@ export class CategoriesService {
 
   getMoviesByGenres(): Observable<Category> {
     const url = `${TMDB_BASE_URL}/genre/movie/list?api_key=${TMDB_API_KEY}`
-    return this.http.get<CategoryDataResult>(url, {   headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-      "Content-Type": "text/plain",
-    }}).pipe(
+    return this.http.get<CategoryDataResult>(url, {   headers: new HttpHeaders({
+      "Host": "api.themoviedb.org",
+    })
+  }).pipe(
       switchMap(data => from(data.results))
     )
   }
