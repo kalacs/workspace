@@ -14,7 +14,11 @@ export class CategoriesService {
 
   getMoviesByGenres(): Observable<Category> {
     const url = `${TMDB_BASE_URL}/genre/movie/list?api_key=${TMDB_API_KEY}`
-    return this.http.get<CategoryDataResult>(url).pipe(
+    return this.http.get<CategoryDataResult>(url, {   headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Content-Type": "text/plain",
+    }}).pipe(
       switchMap(data => from(data.results))
     )
   }
