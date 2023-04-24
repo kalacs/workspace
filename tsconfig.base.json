@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@kalacsorg/categories": ["libs/categories/src/index.ts"],
+      "@kalacsorg/movies": ["libs/movies/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

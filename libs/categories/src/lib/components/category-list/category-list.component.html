@@ -1,0 +1,4 @@
+<h2>Action Movies</h2>
+<ul *ngFor="let movie of movies">
+  <li><a href="#">{{ movie.title }}</a><img [src]="'http://image.tmdb.org/t/p/w185/' + movie.poster_path"/> </li>
+</ul>
