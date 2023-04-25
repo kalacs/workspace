@@ -1,4 +1,24 @@
-<h2>Action Movies</h2>
-<ul *ngFor="let movie of movies">
-  <li><a href="#">{{ movie.title }}</a><img [src]="'http://image.tmdb.org/t/p/w185/' + movie.poster_path"/> </li>
-</ul>
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Action Movies</h2>
+      <div
+      class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+      >
+        <div  *ngFor="let movie of movies" class="group relative">
+          <div class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img [src]="'http://image.tmdb.org/t/p/w342/' + movie.poster_path" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  {{ movie.title }}
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
