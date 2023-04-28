@@ -19,4 +19,9 @@ export class MoviesService {
       switchMap(data => from(data.results))
     )
   }
+
+  getMovie(id: string): Observable<Movie> {
+    const url = `${TMDB_BASE_URL}/movie/${id}?api_key=${TMDB_API_KEY}`
+    return this.http.get<Movie>(url);
+  }
 }

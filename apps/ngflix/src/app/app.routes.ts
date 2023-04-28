@@ -8,9 +8,8 @@ export const appRoutes: Route[] = [
       import('account/Module').then((m) => m.RemoteEntryModule),
   },
   {
-    path: 'details',
-    loadChildren: () =>
-      import('details/Module').then((m) => m.RemoteEntryModule),
+    path: 'movie/:id',
+    loadChildren: () => import('details/Module').then((m) => m.RemoteEntryModule)
   },
   {
     path: '',

@@ -1,0 +1,21 @@
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Action Movies</h2>
+      <div
+      class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+      >
+        <div   *ngFor="let movie of movies"  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a [routerLink]="['/movie', movie.id]">
+              <img class="rounded-t-lg" [src]="'http://image.tmdb.org/t/p/w342/' + movie.poster_path" alt="" />
+          </a>
+          <div class="p-5">
+              <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ movie.title }}</h5>
+              </a>
+          </div>
+      </div>
+      
+
+      </div>
+  </div>
+</div>

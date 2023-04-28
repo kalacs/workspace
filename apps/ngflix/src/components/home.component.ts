@@ -17,7 +17,7 @@ import { Component } from "@angular/core";
             <a href="#" class="inline-block w-full p-4 bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Family</a>
         </li>
     </ul>
-    <kalacsorg-category-list></kalacsorg-category-list>
+    <kalacsorg-movies-list></kalacsorg-movies-list>
   `,
 })
 export class HomeComponent {

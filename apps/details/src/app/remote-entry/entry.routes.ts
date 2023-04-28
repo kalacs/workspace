@@ -3,4 +3,5 @@ import { RemoteEntryComponent } from "./entry.component";
 
 export const remoteRoutes: Route[] = [
   { path: "", component: RemoteEntryComponent },
+  { path: "details/:id", component: RemoteEntryComponent },
 ];
